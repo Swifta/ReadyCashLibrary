@@ -12,6 +12,7 @@ public class MoneyTransfer {
 	private String readyCashPin;
 	private String agentUsername;
 	private String requestreference;
+	private String agentPin;
 	// @XmlTransient
 	// private CashOutStatus status = CashOutStatus.PENDING;
 	private String reference;
@@ -107,6 +108,22 @@ public class MoneyTransfer {
 		this.agentUsername = agentUsername;
 	}
 
+	public String getRequestreference() {
+		return requestreference;
+	}
+
+	public void setRequestreference(String requestreference) {
+		this.requestreference = requestreference;
+	}
+
+	public String getAgentPin() {
+		return agentPin;
+	}
+
+	public void setAgentPin(String agentPin) {
+		this.agentPin = agentPin;
+	}
+
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Sender: " + sender + "\n");
@@ -116,6 +133,7 @@ public class MoneyTransfer {
 		sb.append("Mmo: " + mmo + "\n");
 		sb.append("Agent Username: " + agentUsername + "\n");
 		sb.append("Agent password: " + readyCashPin + "\n");
+		sb.append("Agent pin: " + agentPin + "\n");
 
 		// sb.append("Status: " + status + "\n");
 
