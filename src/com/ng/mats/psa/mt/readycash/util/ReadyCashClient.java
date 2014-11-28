@@ -294,10 +294,10 @@ public class ReadyCashClient {
 
 	}
 
-	public boolean performCashout() {
-		boolean status = false;
+	public static ServiceResponse performCashout(MoneyTransfer moneyTransfer) {
+		ServiceResponse loginServiceResponse = null, moneyTransferServiceResponse = null, balanceServiceResponse = null;
 		logger.info("----------------------initiate cash in");
-		return status;
+		return moneyTransferServiceResponse;
 	}
 
 	public static String hmacSha1(String value, String key) {
