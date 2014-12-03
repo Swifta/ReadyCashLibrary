@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
+import org.apache.axis2.AxisFault;
 import org.apache.commons.codec.binary.Hex;
 
 import com.ng.mats.psa.mt.readycash.model.MoneyTransfer;
@@ -32,8 +33,22 @@ public class ReadyCashClient {
 	private final static String testpin = "1234";
 	private static AgentServiceServiceStub readyCashStub;
 
+	public ReadyCashClient() throws AxisFault {
+		readyCashStub = new AgentServiceServiceStub();
+		readyCashStub._getServiceClient().getOptions().setManageSession(true);
+		long timeOutInMilliSeconds = (5 * 36 * 1000);
+		readyCashStub._getServiceClient().getOptions()
+				.setTimeOutInMilliSeconds(timeOutInMilliSeconds);
+	}
+
 	public static ServiceResponse balanceEnquiry(MoneyTransfer moneyTransfer) {
 		ServiceResponse loginServiceResponse = null, moneyTransferServiceResponse = null, balanceServiceResponse = null;
+		if (readyCashStub == null) {
+			logger.info("------------------------readyCashStub is not available");
+		} else {
+			logger.info("---------------------------readyCashStub is available");
+
+		}
 		logger.info("----------------------perform cash in");
 		LoginE login = new LoginE();
 		Login loginParam = new Login();
@@ -44,12 +59,7 @@ public class ReadyCashClient {
 		LoginResponseE loginResponseE = new LoginResponseE();
 		logger.info("----------------------after instantiating login response");
 		try {
-			readyCashStub = new AgentServiceServiceStub();
-			readyCashStub._getServiceClient().getOptions()
-					.setManageSession(true);
-			long timeOutInMilliSeconds = (5 * 36 * 1000);
-			readyCashStub._getServiceClient().getOptions()
-					.setTimeOutInMilliSeconds(timeOutInMilliSeconds);
+
 			logger.info("----------------------after instantiating agent service stub");
 			loginResponseE = readyCashStub.login(login);
 			logger.info("----------------------after doing login from stub");
@@ -152,13 +162,19 @@ public class ReadyCashClient {
 		} else {
 			logger.info("----------------------loginResponseE is null");
 		}
-		logger.info("----------------------initiate cash in");
+		logger.info("----------------------initiate balance enquiry");
 		return moneyTransferServiceResponse;
 
 	}
 
 	public static ServiceResponse performCashIn(MoneyTransfer moneyTransfer) {
 		ServiceResponse loginServiceResponse = null, moneyTransferServiceResponse = null;
+		if (readyCashStub == null) {
+			logger.info("------------------------readyCashStub is not available");
+		} else {
+			logger.info("---------------------------readyCashStub is available");
+
+		}
 		logger.info("----------------------perform cash in");
 		LoginE login = new LoginE();
 		Login loginParam = new Login();
@@ -169,12 +185,6 @@ public class ReadyCashClient {
 		LoginResponseE loginResponseE = new LoginResponseE();
 		logger.info("----------------------after instantiating login response");
 		try {
-			readyCashStub = new AgentServiceServiceStub();
-			readyCashStub._getServiceClient().getOptions()
-					.setManageSession(true);
-			long timeOutInMilliSeconds = (5 * 36 * 1000);
-			readyCashStub._getServiceClient().getOptions()
-					.setTimeOutInMilliSeconds(timeOutInMilliSeconds);
 			logger.info("----------------------after instantiating agent service stub");
 			loginResponseE = readyCashStub.login(login);
 			logger.info("----------------------after doing login from stub");
@@ -296,6 +306,12 @@ public class ReadyCashClient {
 
 	public static ServiceResponse performCashout(MoneyTransfer moneyTransfer) {
 		ServiceResponse loginServiceResponse = null, moneyTransferServiceResponse = null, balanceServiceResponse = null;
+		if (readyCashStub == null) {
+			logger.info("------------------------readyCashStub is not available");
+		} else {
+			logger.info("---------------------------readyCashStub is available");
+
+		}
 		logger.info("----------------------initiate cash in");
 		return moneyTransferServiceResponse;
 	}
@@ -323,7 +339,7 @@ public class ReadyCashClient {
 		}
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws AxisFault {
 		logger.info("----------------------------------Hello World");
 		MoneyTransfer moneyTransfer = new MoneyTransfer();
 		String key = "ABCDEDF00000FFFF";
@@ -343,8 +359,8 @@ public class ReadyCashClient {
 		// check that dev branch is working
 		logger.info("--------------------------------contents being sent"
 				+ moneyTransfer.toString());
-		performCashIn(moneyTransfer);
-		// balanceEnquiry(moneyTransfer);
+		// new ReadyCashClient().performCashIn(moneyTransfer);
+		new ReadyCashClient().balanceEnquiry(moneyTransfer);
 	}
 
 }
