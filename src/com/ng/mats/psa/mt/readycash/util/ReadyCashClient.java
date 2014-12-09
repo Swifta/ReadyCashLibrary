@@ -16,6 +16,10 @@ import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Balance;
 import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceE;
 import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceResponse;
 import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceResponseE;
+import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_out;
+import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outE;
+import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outResponse;
+import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outResponseE;
 import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Login;
 import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.LoginE;
 import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.LoginResponse;
@@ -305,15 +309,131 @@ public class ReadyCashClient {
 	}
 
 	public static ServiceResponse performCashout(MoneyTransfer moneyTransfer) {
-		ServiceResponse loginServiceResponse = null, moneyTransferServiceResponse = null, balanceServiceResponse = null;
+		ServiceResponse loginServiceResponse = null, cashoutServiceResponse = null;
 		if (readyCashStub == null) {
 			logger.info("------------------------readyCashStub is not available");
 		} else {
 			logger.info("---------------------------readyCashStub is available");
 
 		}
-		logger.info("----------------------initiate cash in");
-		return moneyTransferServiceResponse;
+		logger.info("----------------------perform cash in");
+		LoginE login = new LoginE();
+		Login loginParam = new Login();
+		loginParam.setEmail(moneyTransfer.getAgentUsername());
+		loginParam.setPassword(moneyTransfer.getReadyCashPin());
+		logger.info("----------------------after setting login parameters");
+		login.setLogin(loginParam);
+		LoginResponseE loginResponseE = new LoginResponseE();
+		logger.info("----------------------after instantiating login response");
+		try {
+			logger.info("----------------------after instantiating agent service stub");
+			loginResponseE = readyCashStub.login(login);
+			logger.info("----------------------after doing login from stub");
+		} catch (RemoteException e) {
+			// TODO Auto-generated catch block
+			logger.info("----------------------Remote exception for login");
+			e.printStackTrace();
+		}
+		if (loginResponseE != null) {
+			logger.info("----------------------loginResponseE is not null");
+			LoginResponse loginResponse = loginResponseE.getLoginResponse();
+			if (loginResponse != null) {
+				logger.info("----------------------loginResponse is not null");
+				loginServiceResponse = loginResponse.get_return();
+				if (loginServiceResponse != null) {
+
+					logger.info("----------------------loginServiceResponse is not null");
+					logger.info("Login Service Response????\nAvailable Balance:"
+							+ loginServiceResponse.getAvailableBalance()
+							+ "::\nTransaction Date::"
+							+ loginServiceResponse.getTransDatetime()
+							+ "::\nStatement::"
+							+ loginServiceResponse.getStatement()
+							+ "::\nStan::"
+							+ loginServiceResponse.getStan()
+							+ "::\nRetref::"
+							+ loginServiceResponse.getRetref()
+							+ "::\nExtendedMsg::"
+							+ loginServiceResponse.getExtendedMsg()
+							+ "::\nLedger Balance::"
+							+ loginServiceResponse.getLedgerBalance()
+							+ "::\nDescription::"
+							+ loginServiceResponse.getDesc()
+							+ "::\nCode::"
+							+ loginServiceResponse.getCode());
+					logger.info("---------------------------readyCashStub is available");
+					Cash_outE cash_out = new Cash_outE();
+					Cash_out cashoutParam = new Cash_out();
+					cashoutParam.setAmount(moneyTransfer.getAmount());
+					cashoutParam.setPhone_number_recipient(moneyTransfer
+							.getReceiver());
+					cashoutParam.setPin(moneyTransfer.getAgentPin());
+					cashoutParam.setVoucher(moneyTransfer.getSender());
+					cash_out.setCash_out(cashoutParam);
+
+					Cash_outResponseE cashoutResponseE = new Cash_outResponseE();
+					Cash_outResponse cashoutResponse = new Cash_outResponse();
+					try {
+						cashoutResponseE = readyCashStub.cash_out(cash_out);
+					} catch (RemoteException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					} catch (TerminatingExceptionException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+					if (cashoutResponseE != null) {
+						logger.info("----------------------cashoutResponseE is not null");
+						cashoutResponse = cashoutResponseE
+								.getCash_outResponse();
+						if (cashoutResponse != null) {
+							logger.info("----------------------cashoutResponse is not null");
+							cashoutServiceResponse = cashoutResponse
+									.get_return();
+							if (cashoutServiceResponse != null) {
+								logger.info("cashoutServiceResponse????\nAvailable Balance:"
+										+ cashoutServiceResponse
+												.getAvailableBalance()
+										+ "::\nTransaction Date::"
+										+ cashoutServiceResponse
+												.getTransDatetime()
+										+ "::\nStatement::"
+										+ cashoutServiceResponse.getStatement()
+										+ "::\nStan::"
+										+ cashoutServiceResponse.getStan()
+										+ "::\nRetref::"
+										+ cashoutServiceResponse.getRetref()
+										+ "::\nExtendedMsg::"
+										+ cashoutServiceResponse
+												.getExtendedMsg()
+										+ "::\nLedger Balance::"
+										+ cashoutServiceResponse
+												.getLedgerBalance()
+										+ "::\nDescription::"
+										+ cashoutServiceResponse.getDesc()
+										+ "::\nCode::"
+										+ cashoutServiceResponse.getCode());
+							} else {
+								logger.info("----------------------cashoutServiceResponse is null");
+							}
+						} else {
+							logger.info("----------------------cashoutResponse is null");
+						}
+					} else {
+						logger.info("----------------------cashoutResponseE is null");
+					}
+
+				} else {
+					logger.info("----------------------loginServiceResponse is null");
+				}
+			} else {
+				logger.info("----------------------loginResponse is null");
+			}
+		} else {
+			logger.info("----------------------loginResponseE is null");
+		}
+		logger.info("----------------------initiate cash out");
+		return cashoutServiceResponse;
 	}
 
 	public static String hmacSha1(String value, String key) {
@@ -347,20 +467,23 @@ public class ReadyCashClient {
 
 		String hashedPassword = hmacSha1(password, key);
 		String hashedPswd = HmacUtils.hmacSha1(key, password);
-		moneyTransfer.setAmount(BigDecimal.valueOf(100));
+		moneyTransfer.setAmount(BigDecimal.valueOf(1150));
 		moneyTransfer.setMmo("readycash");
 		moneyTransfer.setAgentUsername("mats@mats.com");
 		logger.info("------------------------the hmac" + hashedPassword);
 		logger.info("------------------------the second hmac" + hashedPswd);
 		moneyTransfer.setReadyCashPin(password);
 		moneyTransfer.setReceiver("08034083054");
-		moneyTransfer.setSender("08034083054");
+		// moneyTransfer.setSender("08034083054");
 		moneyTransfer.setAgentPin("0000000000000000");
+		moneyTransfer.setSender("442597481485");
+		moneyTransfer.setReference("405573");
 		// check that dev branch is working
 		logger.info("--------------------------------contents being sent"
 				+ moneyTransfer.toString());
 		// new ReadyCashClient().performCashIn(moneyTransfer);
-		new ReadyCashClient().balanceEnquiry(moneyTransfer);
+		new ReadyCashClient().performCashout(moneyTransfer);
+		// new ReadyCashClient().balanceEnquiry(moneyTransfer);
 	}
 
 }

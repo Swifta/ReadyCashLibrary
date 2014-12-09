@@ -10,7 +10,7 @@ package com.readycashng.www.ws.api._1_0;
 
 public class TerminatingExceptionException extends java.lang.Exception{
 
-    private static final long serialVersionUID = 1416957962450L;
+    private static final long serialVersionUID = 1418058895947L;
     
     private com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException faultMessage;
 
