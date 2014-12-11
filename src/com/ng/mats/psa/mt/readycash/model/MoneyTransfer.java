@@ -13,6 +13,9 @@ public class MoneyTransfer {
 	private String agentUsername;
 	private String requestreference;
 	private String agentPin;
+	private String bankAccountName;
+	private String bankAccountNumber;
+	private String bank;
 	// @XmlTransient
 	// private CashOutStatus status = CashOutStatus.PENDING;
 	private String reference;
@@ -122,6 +125,30 @@ public class MoneyTransfer {
 
 	public void setAgentPin(String agentPin) {
 		this.agentPin = agentPin;
+	}
+
+	public String getBankAccountName() {
+		return bankAccountName;
+	}
+
+	public void setBankAccountName(String bankAccountName) {
+		this.bankAccountName = bankAccountName;
+	}
+
+	public String getBankAccountNumber() {
+		return bankAccountNumber;
+	}
+
+	public void setBankAccountNumber(String bankAccountNumber) {
+		this.bankAccountNumber = bankAccountNumber;
+	}
+
+	public String getBank() {
+		return bank;
+	}
+
+	public void setBank(String bank) {
+		this.bank = bank;
 	}
 
 	public String toString() {
