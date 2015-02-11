@@ -38,7 +38,7 @@ import com.readycashng.www.ws.api._1_0.TerminatingExceptionException;
 public class ReadyCashClient {
 	private static final Logger logger = Logger.getLogger(ReadyCashClient.class
 			.getName());
-	private final static String testpin = "1234";
+	// private final static String testpin = "1234";
 	private static AgentServiceServiceStub readyCashStub;
 
 	public ReadyCashClient() throws AxisFault {
@@ -599,27 +599,39 @@ public class ReadyCashClient {
 	public static void main(String[] args) throws AxisFault {
 		logger.info("----------------------------------Hello World");
 		MoneyTransfer moneyTransfer = new MoneyTransfer();
-		String key = "ABCDEDF00000FFFF";
-		String password = "password";
+		String key = "636948778095358323114731";
+		String password = "1234";
 
-		String hashedPassword = hmacSha1(password, key);
-		String hashedPswd = HmacUtils.hmacSha1(key, password);
-		moneyTransfer.setAmount(BigDecimal.valueOf(750));
+		// String hashedPassword = hmacSha1(password, key);
+		// String hashedPswd = HmacUtils.hmacSha1(key, password);
+		moneyTransfer.setAmount(BigDecimal.valueOf(50000));
 		moneyTransfer.setMmo("readycash");
 		moneyTransfer.setAgentUsername("mats@mats.com");
-		logger.info("------------------------the hmac" + hashedPassword);
-		logger.info("------------------------the second hmac" + hashedPswd);
+		// logger.info("------------------------the hmac" + hashedPassword);
+		// logger.info("------------------------the second hmac" + hashedPswd);
 		moneyTransfer.setReadyCashPin(password);
-		moneyTransfer.setReceiver("08034083054");
+		moneyTransfer.setReceiver("07038727400");
+		moneyTransfer.setBankAccountNumber("0009221104");
+		moneyTransfer.setBank("GTBank");
+		moneyTransfer.setBankAccountName("ADEYEKUN Fausat Opeyemi");
 		// moneyTransfer.setSender("08034083054");
-		moneyTransfer.setAgentPin("0000000000000000");
-		moneyTransfer.setSender("070266989991");
-		moneyTransfer.setReference("148317");
+		TripleDES tripleDes = new TripleDES();
+		// tripleDes.encrypt(key, moneyTransfer.getReadyCashPin())
+		try {
+			moneyTransfer.setAgentPin(tripleDes.encrypt(key,
+					moneyTransfer.getReadyCashPin()));
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		moneyTransfer.setSender("91465127276634");
+		moneyTransfer.setReference("302846");
 		// check that dev branch is working
 		logger.info("--------------------------------contents being sent"
 				+ moneyTransfer.toString());
-		// new ReadyCashClient().performCashIn(moneyTransfer);
-		new ReadyCashClient().performCashout(moneyTransfer);
+		new ReadyCashClient().performCashIn(moneyTransfer);
+		// new ReadyCashClient().performCashout(moneyTransfer);
+		// new ReadyCashClient().transferToBank(moneyTransfer);
 		// new ReadyCashClient().balanceEnquiry(moneyTransfer);
 	}
 
