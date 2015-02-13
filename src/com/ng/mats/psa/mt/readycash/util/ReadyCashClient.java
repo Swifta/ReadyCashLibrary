@@ -600,7 +600,11 @@ public class ReadyCashClient {
 		logger.info("----------------------------------Hello World");
 		MoneyTransfer moneyTransfer = new MoneyTransfer();
 		String key = "636948778095358323114731";
-		String password = "1234";
+		String password = "password";
+
+		String userPin = "0000000000000000";
+		String destinationresourceid = "08034083054";
+		String orginatingresourceid = "070266989991";
 
 		// String hashedPassword = hmacSha1(password, key);
 		// String hashedPswd = HmacUtils.hmacSha1(key, password);
@@ -610,29 +614,32 @@ public class ReadyCashClient {
 		// logger.info("------------------------the hmac" + hashedPassword);
 		// logger.info("------------------------the second hmac" + hashedPswd);
 		moneyTransfer.setReadyCashPin(password);
-		moneyTransfer.setReceiver("07038727400");
+		moneyTransfer.setReceiver("08034083054");
 		moneyTransfer.setBankAccountNumber("0009221104");
 		moneyTransfer.setBank("GTBank");
 		moneyTransfer.setBankAccountName("ADEYEKUN Fausat Opeyemi");
+		moneyTransfer.setReadyCashPin(password);
+		// moneyTransfer.setReadyCashPin("0000000000000000");
+		moneyTransfer.setAgentPin("0000000000000000");
 		// moneyTransfer.setSender("08034083054");
-		TripleDES tripleDes = new TripleDES();
-		// tripleDes.encrypt(key, moneyTransfer.getReadyCashPin())
-		try {
-			moneyTransfer.setAgentPin(tripleDes.encrypt(key,
-					moneyTransfer.getReadyCashPin()));
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
+		/*
+		 * production details for PIN encryption TripleDES tripleDes = new
+		 * TripleDES(); try {
+		 * moneyTransfer.setReadyCashPin(tripleDes.encrypt(key,
+		 * moneyTransfer.getReadyCashPin()));
+		 * moneyTransfer.setAgentPin(tripleDes.encrypt(key,
+		 * moneyTransfer.getAgentPin())); } catch (Exception e) { // TODO
+		 * Auto-generated catch block e.printStackTrace(); }
+		 */
 		moneyTransfer.setSender("91465127276634");
 		moneyTransfer.setReference("302846");
 		// check that dev branch is working
 		logger.info("--------------------------------contents being sent"
 				+ moneyTransfer.toString());
-		new ReadyCashClient().performCashIn(moneyTransfer);
+		// new ReadyCashClient().performCashIn(moneyTransfer);
 		// new ReadyCashClient().performCashout(moneyTransfer);
 		// new ReadyCashClient().transferToBank(moneyTransfer);
-		// new ReadyCashClient().balanceEnquiry(moneyTransfer);
+		new ReadyCashClient().balanceEnquiry(moneyTransfer);
 	}
-
 }
