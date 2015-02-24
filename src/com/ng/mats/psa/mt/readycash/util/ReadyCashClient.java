@@ -608,7 +608,7 @@ public class ReadyCashClient {
 
 		// String hashedPassword = hmacSha1(password, key);
 		// String hashedPswd = HmacUtils.hmacSha1(key, password);
-		moneyTransfer.setAmount(BigDecimal.valueOf(50000));
+		moneyTransfer.setAmount(BigDecimal.valueOf(1000));
 		moneyTransfer.setMmo("readycash");
 		moneyTransfer.setAgentUsername("mats@mats.com");
 		// logger.info("------------------------the hmac" + hashedPassword);
@@ -632,14 +632,14 @@ public class ReadyCashClient {
 		 * moneyTransfer.getAgentPin())); } catch (Exception e) { // TODO
 		 * Auto-generated catch block e.printStackTrace(); }
 		 */
-		moneyTransfer.setSender("91465127276634");
-		moneyTransfer.setReference("302846");
+		moneyTransfer.setSender("553455864248");
+		moneyTransfer.setReference("");
 		// check that dev branch is working
 		logger.info("--------------------------------contents being sent"
 				+ moneyTransfer.toString());
 		// new ReadyCashClient().performCashIn(moneyTransfer);
-		// new ReadyCashClient().performCashout(moneyTransfer);
+		new ReadyCashClient().performCashout(moneyTransfer);
 		// new ReadyCashClient().transferToBank(moneyTransfer);
-		new ReadyCashClient().balanceEnquiry(moneyTransfer);
+		// new ReadyCashClient().balanceEnquiry(moneyTransfer);
 	}
 }
