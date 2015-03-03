@@ -1,6 +1,5 @@
 package com.ng.mats.psa.mt.readycash.util;
 
-import java.math.BigDecimal;
 import java.rmi.RemoteException;
 import java.util.logging.Logger;
 
@@ -597,44 +596,12 @@ public class ReadyCashClient {
 	}
 
 	public static void main(String[] args) throws AxisFault {
+		System.out.println("Hello I am here....");
 		logger.info("----------------------------------Hello World");
-		MoneyTransfer moneyTransfer = new MoneyTransfer();
-		String key = "636948778095358323114731";
-		String password = "password";
-
-		String userPin = "0000000000000000";
-		String destinationresourceid = "08034083054";
-		String orginatingresourceid = "070266989991";
-
-		// String hashedPassword = hmacSha1(password, key);
-		// String hashedPswd = HmacUtils.hmacSha1(key, password);
-		moneyTransfer.setAmount(BigDecimal.valueOf(1000));
-		moneyTransfer.setMmo("readycash");
-		moneyTransfer.setAgentUsername("mats@mats.com");
-		// logger.info("------------------------the hmac" + hashedPassword);
-		// logger.info("------------------------the second hmac" + hashedPswd);
-		moneyTransfer.setReadyCashPin(password);
-		moneyTransfer.setReceiver("08034083054");
-		moneyTransfer.setBankAccountNumber("0009221104");
-		moneyTransfer.setBank("GTBank");
-		moneyTransfer.setBankAccountName("ADEYEKUN Fausat Opeyemi");
-		moneyTransfer.setReadyCashPin(password);
-		// moneyTransfer.setReadyCashPin("0000000000000000");
-		moneyTransfer.setAgentPin("0000000000000000");
-		// moneyTransfer.setSender("08034083054");
-
-		/*
-		 * production details for PIN encryption TripleDES tripleDes = new
-		 * TripleDES(); try {
-		 * moneyTransfer.setReadyCashPin(tripleDes.encrypt(key,
-		 * moneyTransfer.getReadyCashPin()));
-		 * moneyTransfer.setAgentPin(tripleDes.encrypt(key,
-		 * moneyTransfer.getAgentPin())); } catch (Exception e) { // TODO
-		 * Auto-generated catch block e.printStackTrace(); }
-		 */
-		moneyTransfer.setSender("553455864248");
-		moneyTransfer.setReference("");
-		// check that dev branch is working
+		System.out.println("After the loggers....");
+		MoneyTransfer moneyTransfer = new ReadyCashPropertyValues()
+				.getPropertyValues();
+		System.out.println("After setting the property values....");
 		logger.info("--------------------------------contents being sent"
 				+ moneyTransfer.toString());
 		// new ReadyCashClient().performCashIn(moneyTransfer);
