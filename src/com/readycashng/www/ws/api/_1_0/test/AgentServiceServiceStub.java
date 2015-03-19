@@ -5,7 +5,7 @@
  * This file was auto-generated from WSDL
  * by the Apache Axis2 version: 1.6.1-wso2v10  Built on : Sep 04, 2013 (02:02:54 UTC)
  */
-        package com.readycashng.www.ws.api._1_0;
+        package com.readycashng.www.ws.api._1_0.test;
 
         
 
@@ -61,7 +61,7 @@
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
 
-            __operation.setName(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0", "cash_out"));
+            __operation.setName(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0", "mobile_transfer"));
 	    _service.addOperation(__operation);
 	    
 
@@ -73,7 +73,7 @@
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
 
-            __operation.setName(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0", "mobile_transfer"));
+            __operation.setName(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0", "cash_out"));
 	    _service.addOperation(__operation);
 	    
 
@@ -85,7 +85,7 @@
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
 
-            __operation.setName(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0", "airtime"));
+            __operation.setName(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0", "bank_account_name_inquiry"));
 	    _service.addOperation(__operation);
 	    
 
@@ -97,7 +97,7 @@
                    __operation = new org.apache.axis2.description.OutInAxisOperation();
                 
 
-            __operation.setName(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0", "bank_account_name_inquiry"));
+            __operation.setName(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0", "airtime"));
 	    _service.addOperation(__operation);
 	    
 
@@ -187,21 +187,21 @@
               faultExceptionClassNameMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "balance"),"com.readycashng.www.ws.api._1_0.TerminatingExceptionException");
               faultMessageMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "balance"),"com.readycashng.www.ws.api._1_0.AgentServiceServiceStub$TerminatingException");
            
-              faultExceptionNameMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "cash_out"),"com.readycashng.www.ws.api._1_0.TerminatingExceptionException");
-              faultExceptionClassNameMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "cash_out"),"com.readycashng.www.ws.api._1_0.TerminatingExceptionException");
-              faultMessageMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "cash_out"),"com.readycashng.www.ws.api._1_0.AgentServiceServiceStub$TerminatingException");
-           
               faultExceptionNameMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "mobile_transfer"),"com.readycashng.www.ws.api._1_0.TerminatingExceptionException");
               faultExceptionClassNameMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "mobile_transfer"),"com.readycashng.www.ws.api._1_0.TerminatingExceptionException");
               faultMessageMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "mobile_transfer"),"com.readycashng.www.ws.api._1_0.AgentServiceServiceStub$TerminatingException");
            
-              faultExceptionNameMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "airtime"),"com.readycashng.www.ws.api._1_0.TerminatingExceptionException");
-              faultExceptionClassNameMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "airtime"),"com.readycashng.www.ws.api._1_0.TerminatingExceptionException");
-              faultMessageMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "airtime"),"com.readycashng.www.ws.api._1_0.AgentServiceServiceStub$TerminatingException");
+              faultExceptionNameMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "cash_out"),"com.readycashng.www.ws.api._1_0.TerminatingExceptionException");
+              faultExceptionClassNameMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "cash_out"),"com.readycashng.www.ws.api._1_0.TerminatingExceptionException");
+              faultMessageMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "cash_out"),"com.readycashng.www.ws.api._1_0.AgentServiceServiceStub$TerminatingException");
            
               faultExceptionNameMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "bank_account_name_inquiry"),"com.readycashng.www.ws.api._1_0.TerminatingExceptionException");
               faultExceptionClassNameMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "bank_account_name_inquiry"),"com.readycashng.www.ws.api._1_0.TerminatingExceptionException");
               faultMessageMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "bank_account_name_inquiry"),"com.readycashng.www.ws.api._1_0.AgentServiceServiceStub$TerminatingException");
+           
+              faultExceptionNameMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "airtime"),"com.readycashng.www.ws.api._1_0.TerminatingExceptionException");
+              faultExceptionClassNameMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "airtime"),"com.readycashng.www.ws.api._1_0.TerminatingExceptionException");
+              faultMessageMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "airtime"),"com.readycashng.www.ws.api._1_0.AgentServiceServiceStub$TerminatingException");
            
               faultExceptionNameMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "change_key"),"com.readycashng.www.ws.api._1_0.TerminatingExceptionException");
               faultExceptionClassNameMap.put(new org.apache.axis2.client.FaultMapKey(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0","TerminatingException"), "change_key"),"com.readycashng.www.ws.api._1_0.TerminatingExceptionException");
@@ -263,7 +263,7 @@
      */
     public AgentServiceServiceStub(org.apache.axis2.context.ConfigurationContext configurationContext) throws org.apache.axis2.AxisFault {
         
-                    this(configurationContext,"https://www.readycash.com.ng:6443/ws/api/1.0" );
+                    this(configurationContext,"http://62.173.32.27:8080/ws/api/1.0" );
                 
     }
 
@@ -272,7 +272,7 @@
      */
     public AgentServiceServiceStub() throws org.apache.axis2.AxisFault {
         
-                    this("https://www.readycash.com.ng:6443/ws/api/1.0" );
+                    this("http://62.173.32.27:8080/ws/api/1.0" );
                 
     }
 
@@ -292,20 +292,20 @@
                      * @see com.readycashng.www.ws.api._1_0.AgentServiceService#balance
                      * @param balance
                     
-                     * @throws com.readycashng.www.ws.api._1_0.TerminatingExceptionException : 
+                     * @throws com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException : 
                      */
 
                     
 
-                            public  com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceResponseE balance(
+                            public  com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceResponseE balance(
 
-                            com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceE balance)
+                            com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceE balance)
                         
 
                     throws java.rmi.RemoteException
                     
                     
-                        ,com.readycashng.www.ws.api._1_0.TerminatingExceptionException{
+                        ,com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException{
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
                org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[0].getName());
@@ -351,11 +351,11 @@
                 
                                 java.lang.Object object = fromOM(
                                              _returnEnv.getBody().getFirstElement() ,
-                                             com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceResponseE.class,
+                                             com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceResponseE.class,
                                               getEnvelopeNamespaces(_returnEnv));
 
                                
-                                        return (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceResponseE)object;
+                                        return (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceResponseE)object;
                                    
          }catch(org.apache.axis2.AxisFault f){
 
@@ -375,135 +375,8 @@
                                    new java.lang.Class[]{messageClass});
                         m.invoke(ex,new java.lang.Object[]{messageObject});
                         
-                        if (ex instanceof com.readycashng.www.ws.api._1_0.TerminatingExceptionException){
-                          throw (com.readycashng.www.ws.api._1_0.TerminatingExceptionException)ex;
-                        }
-                        
-
-                        throw new java.rmi.RemoteException(ex.getMessage(), ex);
-                    }catch(java.lang.ClassCastException e){
-                       // we cannot intantiate the class - throw the original Axis fault
-                        throw f;
-                    } catch (java.lang.ClassNotFoundException e) {
-                        // we cannot intantiate the class - throw the original Axis fault
-                        throw f;
-                    }catch (java.lang.NoSuchMethodException e) {
-                        // we cannot intantiate the class - throw the original Axis fault
-                        throw f;
-                    } catch (java.lang.reflect.InvocationTargetException e) {
-                        // we cannot intantiate the class - throw the original Axis fault
-                        throw f;
-                    }  catch (java.lang.IllegalAccessException e) {
-                        // we cannot intantiate the class - throw the original Axis fault
-                        throw f;
-                    }   catch (java.lang.InstantiationException e) {
-                        // we cannot intantiate the class - throw the original Axis fault
-                        throw f;
-                    }
-                }else{
-                    throw f;
-                }
-            }else{
-                throw f;
-            }
-            } finally {
-                if (_messageContext.getTransportOut() != null) {
-                      _messageContext.getTransportOut().getSender().cleanup(_messageContext);
-                }
-            }
-        }
-            
-                    /**
-                     * Auto generated method signature
-                     * 
-                     * @see com.readycashng.www.ws.api._1_0.AgentServiceService#cash_out
-                     * @param cash_out
-                    
-                     * @throws com.readycashng.www.ws.api._1_0.TerminatingExceptionException : 
-                     */
-
-                    
-
-                            public  com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outResponseE cash_out(
-
-                            com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outE cash_out)
-                        
-
-                    throws java.rmi.RemoteException
-                    
-                    
-                        ,com.readycashng.www.ws.api._1_0.TerminatingExceptionException{
-              org.apache.axis2.context.MessageContext _messageContext = null;
-              try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[1].getName());
-              _operationClient.getOptions().setAction("http://www.readycashng.com/ws/api/1.0/ReadyCash_AgentService_1.0/cash_outRequest");
-              _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
-
-              
-              
-                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
-              
-
-              // create a message context
-              _messageContext = new org.apache.axis2.context.MessageContext();
-
-              
-
-              // create SOAP envelope with that payload
-              org.apache.axiom.soap.SOAPEnvelope env = null;
-                    
-                                                    
-                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    cash_out,
-                                                    optimizeContent(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0",
-                                                    "cash_out")), new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0",
-                                                    "cash_out"));
-                                                
-        //adding SOAP soap_headers
-         _serviceClient.addHeadersToEnvelope(env);
-        // set the message context with that soap envelope
-        _messageContext.setEnvelope(env);
-
-        // add the message contxt to the operation client
-        _operationClient.addMessageContext(_messageContext);
-
-        //execute the operation client
-        _operationClient.execute(true);
-
-         
-               org.apache.axis2.context.MessageContext _returnMessageContext = _operationClient.getMessageContext(
-                                           org.apache.axis2.wsdl.WSDLConstants.MESSAGE_LABEL_IN_VALUE);
-                org.apache.axiom.soap.SOAPEnvelope _returnEnv = _returnMessageContext.getEnvelope();
-                
-                
-                                java.lang.Object object = fromOM(
-                                             _returnEnv.getBody().getFirstElement() ,
-                                             com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outResponseE.class,
-                                              getEnvelopeNamespaces(_returnEnv));
-
-                               
-                                        return (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outResponseE)object;
-                                   
-         }catch(org.apache.axis2.AxisFault f){
-
-            org.apache.axiom.om.OMElement faultElt = f.getDetail();
-            if (faultElt!=null){
-                if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cash_out"))){
-                    //make the fault by reflection
-                    try{
-                        java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cash_out"));
-                        java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
-                        java.lang.Exception ex = (java.lang.Exception) exceptionClass.newInstance();
-                        //message class
-                        java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cash_out"));
-                        java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
-                        java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
-                        java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
-                                   new java.lang.Class[]{messageClass});
-                        m.invoke(ex,new java.lang.Object[]{messageObject});
-                        
-                        if (ex instanceof com.readycashng.www.ws.api._1_0.TerminatingExceptionException){
-                          throw (com.readycashng.www.ws.api._1_0.TerminatingExceptionException)ex;
+                        if (ex instanceof com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException){
+                          throw (com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException)ex;
                         }
                         
 
@@ -546,23 +419,23 @@
                      * @see com.readycashng.www.ws.api._1_0.AgentServiceService#mobile_transfer
                      * @param mobile_transfer
                     
-                     * @throws com.readycashng.www.ws.api._1_0.TerminatingExceptionException : 
+                     * @throws com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException : 
                      */
 
                     
 
-                            public  com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Mobile_transferResponseE mobile_transfer(
+                            public  com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferResponseE mobile_transfer(
 
-                            com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Mobile_transferE mobile_transfer)
+                            com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferE mobile_transfer)
                         
 
                     throws java.rmi.RemoteException
                     
                     
-                        ,com.readycashng.www.ws.api._1_0.TerminatingExceptionException{
+                        ,com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException{
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[2].getName());
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[1].getName());
               _operationClient.getOptions().setAction("http://www.readycashng.com/ws/api/1.0/ReadyCash_AgentService_1.0/mobile_transferRequest");
               _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -605,11 +478,11 @@
                 
                                 java.lang.Object object = fromOM(
                                              _returnEnv.getBody().getFirstElement() ,
-                                             com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Mobile_transferResponseE.class,
+                                             com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferResponseE.class,
                                               getEnvelopeNamespaces(_returnEnv));
 
                                
-                                        return (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Mobile_transferResponseE)object;
+                                        return (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferResponseE)object;
                                    
          }catch(org.apache.axis2.AxisFault f){
 
@@ -629,8 +502,8 @@
                                    new java.lang.Class[]{messageClass});
                         m.invoke(ex,new java.lang.Object[]{messageObject});
                         
-                        if (ex instanceof com.readycashng.www.ws.api._1_0.TerminatingExceptionException){
-                          throw (com.readycashng.www.ws.api._1_0.TerminatingExceptionException)ex;
+                        if (ex instanceof com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException){
+                          throw (com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException)ex;
                         }
                         
 
@@ -670,27 +543,27 @@
                     /**
                      * Auto generated method signature
                      * 
-                     * @see com.readycashng.www.ws.api._1_0.AgentServiceService#airtime
-                     * @param airtime
+                     * @see com.readycashng.www.ws.api._1_0.AgentServiceService#cash_out
+                     * @param cash_out
                     
-                     * @throws com.readycashng.www.ws.api._1_0.TerminatingExceptionException : 
+                     * @throws com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException : 
                      */
 
                     
 
-                            public  com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.AirtimeResponseE airtime(
+                            public  com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outResponseE cash_out(
 
-                            com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.AirtimeE airtime)
+                            com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outE cash_out)
                         
 
                     throws java.rmi.RemoteException
                     
                     
-                        ,com.readycashng.www.ws.api._1_0.TerminatingExceptionException{
+                        ,com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException{
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[3].getName());
-              _operationClient.getOptions().setAction("http://www.readycashng.com/ws/api/1.0/ReadyCash_AgentService_1.0/airtimeRequest");
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[2].getName());
+              _operationClient.getOptions().setAction("http://www.readycashng.com/ws/api/1.0/ReadyCash_AgentService_1.0/cash_outRequest");
               _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
               
@@ -708,10 +581,10 @@
                     
                                                     
                                                     env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
-                                                    airtime,
+                                                    cash_out,
                                                     optimizeContent(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0",
-                                                    "airtime")), new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0",
-                                                    "airtime"));
+                                                    "cash_out")), new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0",
+                                                    "cash_out"));
                                                 
         //adding SOAP soap_headers
          _serviceClient.addHeadersToEnvelope(env);
@@ -732,32 +605,32 @@
                 
                                 java.lang.Object object = fromOM(
                                              _returnEnv.getBody().getFirstElement() ,
-                                             com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.AirtimeResponseE.class,
+                                             com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outResponseE.class,
                                               getEnvelopeNamespaces(_returnEnv));
 
                                
-                                        return (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.AirtimeResponseE)object;
+                                        return (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outResponseE)object;
                                    
          }catch(org.apache.axis2.AxisFault f){
 
             org.apache.axiom.om.OMElement faultElt = f.getDetail();
             if (faultElt!=null){
-                if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"airtime"))){
+                if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cash_out"))){
                     //make the fault by reflection
                     try{
-                        java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"airtime"));
+                        java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cash_out"));
                         java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
                         java.lang.Exception ex = (java.lang.Exception) exceptionClass.newInstance();
                         //message class
-                        java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"airtime"));
+                        java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"cash_out"));
                         java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
                         java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
                         java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
                                    new java.lang.Class[]{messageClass});
                         m.invoke(ex,new java.lang.Object[]{messageObject});
                         
-                        if (ex instanceof com.readycashng.www.ws.api._1_0.TerminatingExceptionException){
-                          throw (com.readycashng.www.ws.api._1_0.TerminatingExceptionException)ex;
+                        if (ex instanceof com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException){
+                          throw (com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException)ex;
                         }
                         
 
@@ -800,23 +673,23 @@
                      * @see com.readycashng.www.ws.api._1_0.AgentServiceService#bank_account_name_inquiry
                      * @param bank_account_name_inquiry
                     
-                     * @throws com.readycashng.www.ws.api._1_0.TerminatingExceptionException : 
+                     * @throws com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException : 
                      */
 
                     
 
-                            public  com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_account_name_inquiryResponseE bank_account_name_inquiry(
+                            public  com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_account_name_inquiryResponseE bank_account_name_inquiry(
 
-                            com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_account_name_inquiryE bank_account_name_inquiry)
+                            com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_account_name_inquiryE bank_account_name_inquiry)
                         
 
                     throws java.rmi.RemoteException
                     
                     
-                        ,com.readycashng.www.ws.api._1_0.TerminatingExceptionException{
+                        ,com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException{
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
-               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[4].getName());
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[3].getName());
               _operationClient.getOptions().setAction("http://www.readycashng.com/ws/api/1.0/ReadyCash_AgentService_1.0/bank_account_name_inquiryRequest");
               _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
 
@@ -859,11 +732,11 @@
                 
                                 java.lang.Object object = fromOM(
                                              _returnEnv.getBody().getFirstElement() ,
-                                             com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_account_name_inquiryResponseE.class,
+                                             com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_account_name_inquiryResponseE.class,
                                               getEnvelopeNamespaces(_returnEnv));
 
                                
-                                        return (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_account_name_inquiryResponseE)object;
+                                        return (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_account_name_inquiryResponseE)object;
                                    
          }catch(org.apache.axis2.AxisFault f){
 
@@ -883,8 +756,135 @@
                                    new java.lang.Class[]{messageClass});
                         m.invoke(ex,new java.lang.Object[]{messageObject});
                         
-                        if (ex instanceof com.readycashng.www.ws.api._1_0.TerminatingExceptionException){
-                          throw (com.readycashng.www.ws.api._1_0.TerminatingExceptionException)ex;
+                        if (ex instanceof com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException){
+                          throw (com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException)ex;
+                        }
+                        
+
+                        throw new java.rmi.RemoteException(ex.getMessage(), ex);
+                    }catch(java.lang.ClassCastException e){
+                       // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    } catch (java.lang.ClassNotFoundException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }catch (java.lang.NoSuchMethodException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    } catch (java.lang.reflect.InvocationTargetException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }  catch (java.lang.IllegalAccessException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }   catch (java.lang.InstantiationException e) {
+                        // we cannot intantiate the class - throw the original Axis fault
+                        throw f;
+                    }
+                }else{
+                    throw f;
+                }
+            }else{
+                throw f;
+            }
+            } finally {
+                if (_messageContext.getTransportOut() != null) {
+                      _messageContext.getTransportOut().getSender().cleanup(_messageContext);
+                }
+            }
+        }
+            
+                    /**
+                     * Auto generated method signature
+                     * 
+                     * @see com.readycashng.www.ws.api._1_0.AgentServiceService#airtime
+                     * @param airtime
+                    
+                     * @throws com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException : 
+                     */
+
+                    
+
+                            public  com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.AirtimeResponseE airtime(
+
+                            com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.AirtimeE airtime)
+                        
+
+                    throws java.rmi.RemoteException
+                    
+                    
+                        ,com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException{
+              org.apache.axis2.context.MessageContext _messageContext = null;
+              try{
+               org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[4].getName());
+              _operationClient.getOptions().setAction("http://www.readycashng.com/ws/api/1.0/ReadyCash_AgentService_1.0/airtimeRequest");
+              _operationClient.getOptions().setExceptionToBeThrownOnSOAPFault(true);
+
+              
+              
+                  addPropertyToOperationClient(_operationClient,org.apache.axis2.description.WSDL2Constants.ATTR_WHTTP_QUERY_PARAMETER_SEPARATOR,"&");
+              
+
+              // create a message context
+              _messageContext = new org.apache.axis2.context.MessageContext();
+
+              
+
+              // create SOAP envelope with that payload
+              org.apache.axiom.soap.SOAPEnvelope env = null;
+                    
+                                                    
+                                                    env = toEnvelope(getFactory(_operationClient.getOptions().getSoapVersionURI()),
+                                                    airtime,
+                                                    optimizeContent(new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0",
+                                                    "airtime")), new javax.xml.namespace.QName("http://www.readycashng.com/ws/api/1.0",
+                                                    "airtime"));
+                                                
+        //adding SOAP soap_headers
+         _serviceClient.addHeadersToEnvelope(env);
+        // set the message context with that soap envelope
+        _messageContext.setEnvelope(env);
+
+        // add the message contxt to the operation client
+        _operationClient.addMessageContext(_messageContext);
+
+        //execute the operation client
+        _operationClient.execute(true);
+
+         
+               org.apache.axis2.context.MessageContext _returnMessageContext = _operationClient.getMessageContext(
+                                           org.apache.axis2.wsdl.WSDLConstants.MESSAGE_LABEL_IN_VALUE);
+                org.apache.axiom.soap.SOAPEnvelope _returnEnv = _returnMessageContext.getEnvelope();
+                
+                
+                                java.lang.Object object = fromOM(
+                                             _returnEnv.getBody().getFirstElement() ,
+                                             com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.AirtimeResponseE.class,
+                                              getEnvelopeNamespaces(_returnEnv));
+
+                               
+                                        return (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.AirtimeResponseE)object;
+                                   
+         }catch(org.apache.axis2.AxisFault f){
+
+            org.apache.axiom.om.OMElement faultElt = f.getDetail();
+            if (faultElt!=null){
+                if (faultExceptionNameMap.containsKey(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"airtime"))){
+                    //make the fault by reflection
+                    try{
+                        java.lang.String exceptionClassName = (java.lang.String)faultExceptionClassNameMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"airtime"));
+                        java.lang.Class exceptionClass = java.lang.Class.forName(exceptionClassName);
+                        java.lang.Exception ex = (java.lang.Exception) exceptionClass.newInstance();
+                        //message class
+                        java.lang.String messageClassName = (java.lang.String)faultMessageMap.get(new org.apache.axis2.client.FaultMapKey(faultElt.getQName(),"airtime"));
+                        java.lang.Class messageClass = java.lang.Class.forName(messageClassName);
+                        java.lang.Object messageObject = fromOM(faultElt,messageClass,null);
+                        java.lang.reflect.Method m = exceptionClass.getMethod("setFaultMessage",
+                                   new java.lang.Class[]{messageClass});
+                        m.invoke(ex,new java.lang.Object[]{messageObject});
+                        
+                        if (ex instanceof com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException){
+                          throw (com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException)ex;
                         }
                         
 
@@ -927,20 +927,20 @@
                      * @see com.readycashng.www.ws.api._1_0.AgentServiceService#change_key
                      * @param change_key
                     
-                     * @throws com.readycashng.www.ws.api._1_0.TerminatingExceptionException : 
+                     * @throws com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException : 
                      */
 
                     
 
-                            public  com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Change_keyResponseE change_key(
+                            public  com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Change_keyResponseE change_key(
 
-                            com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Change_keyE change_key)
+                            com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Change_keyE change_key)
                         
 
                     throws java.rmi.RemoteException
                     
                     
-                        ,com.readycashng.www.ws.api._1_0.TerminatingExceptionException{
+                        ,com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException{
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
                org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[5].getName());
@@ -986,11 +986,11 @@
                 
                                 java.lang.Object object = fromOM(
                                              _returnEnv.getBody().getFirstElement() ,
-                                             com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Change_keyResponseE.class,
+                                             com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Change_keyResponseE.class,
                                               getEnvelopeNamespaces(_returnEnv));
 
                                
-                                        return (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Change_keyResponseE)object;
+                                        return (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Change_keyResponseE)object;
                                    
          }catch(org.apache.axis2.AxisFault f){
 
@@ -1010,8 +1010,8 @@
                                    new java.lang.Class[]{messageClass});
                         m.invoke(ex,new java.lang.Object[]{messageObject});
                         
-                        if (ex instanceof com.readycashng.www.ws.api._1_0.TerminatingExceptionException){
-                          throw (com.readycashng.www.ws.api._1_0.TerminatingExceptionException)ex;
+                        if (ex instanceof com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException){
+                          throw (com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException)ex;
                         }
                         
 
@@ -1054,20 +1054,20 @@
                      * @see com.readycashng.www.ws.api._1_0.AgentServiceService#link_card
                      * @param link_card
                     
-                     * @throws com.readycashng.www.ws.api._1_0.TerminatingExceptionException : 
+                     * @throws com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException : 
                      */
 
                     
 
-                            public  com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Link_cardResponseE link_card(
+                            public  com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Link_cardResponseE link_card(
 
-                            com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Link_cardE link_card)
+                            com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Link_cardE link_card)
                         
 
                     throws java.rmi.RemoteException
                     
                     
-                        ,com.readycashng.www.ws.api._1_0.TerminatingExceptionException{
+                        ,com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException{
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
                org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[6].getName());
@@ -1113,11 +1113,11 @@
                 
                                 java.lang.Object object = fromOM(
                                              _returnEnv.getBody().getFirstElement() ,
-                                             com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Link_cardResponseE.class,
+                                             com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Link_cardResponseE.class,
                                               getEnvelopeNamespaces(_returnEnv));
 
                                
-                                        return (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Link_cardResponseE)object;
+                                        return (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Link_cardResponseE)object;
                                    
          }catch(org.apache.axis2.AxisFault f){
 
@@ -1137,8 +1137,8 @@
                                    new java.lang.Class[]{messageClass});
                         m.invoke(ex,new java.lang.Object[]{messageObject});
                         
-                        if (ex instanceof com.readycashng.www.ws.api._1_0.TerminatingExceptionException){
-                          throw (com.readycashng.www.ws.api._1_0.TerminatingExceptionException)ex;
+                        if (ex instanceof com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException){
+                          throw (com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException)ex;
                         }
                         
 
@@ -1181,20 +1181,20 @@
                      * @see com.readycashng.www.ws.api._1_0.AgentServiceService#bank_transfer
                      * @param bank_transfer
                     
-                     * @throws com.readycashng.www.ws.api._1_0.TerminatingExceptionException : 
+                     * @throws com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException : 
                      */
 
                     
 
-                            public  com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_transferResponseE bank_transfer(
+                            public  com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferResponseE bank_transfer(
 
-                            com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_transferE bank_transfer)
+                            com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferE bank_transfer)
                         
 
                     throws java.rmi.RemoteException
                     
                     
-                        ,com.readycashng.www.ws.api._1_0.TerminatingExceptionException{
+                        ,com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException{
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
                org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[7].getName());
@@ -1240,11 +1240,11 @@
                 
                                 java.lang.Object object = fromOM(
                                              _returnEnv.getBody().getFirstElement() ,
-                                             com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_transferResponseE.class,
+                                             com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferResponseE.class,
                                               getEnvelopeNamespaces(_returnEnv));
 
                                
-                                        return (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_transferResponseE)object;
+                                        return (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferResponseE)object;
                                    
          }catch(org.apache.axis2.AxisFault f){
 
@@ -1264,8 +1264,8 @@
                                    new java.lang.Class[]{messageClass});
                         m.invoke(ex,new java.lang.Object[]{messageObject});
                         
-                        if (ex instanceof com.readycashng.www.ws.api._1_0.TerminatingExceptionException){
-                          throw (com.readycashng.www.ws.api._1_0.TerminatingExceptionException)ex;
+                        if (ex instanceof com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException){
+                          throw (com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException)ex;
                         }
                         
 
@@ -1312,9 +1312,9 @@
 
                     
 
-                            public  com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.LoginResponseE login(
+                            public  com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginResponseE login(
 
-                            com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.LoginE login)
+                            com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginE login)
                         
 
                     throws java.rmi.RemoteException
@@ -1365,11 +1365,11 @@
                 
                                 java.lang.Object object = fromOM(
                                              _returnEnv.getBody().getFirstElement() ,
-                                             com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.LoginResponseE.class,
+                                             com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginResponseE.class,
                                               getEnvelopeNamespaces(_returnEnv));
 
                                
-                                        return (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.LoginResponseE)object;
+                                        return (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginResponseE)object;
                                    
          }catch(org.apache.axis2.AxisFault f){
 
@@ -1429,20 +1429,20 @@
                      * @see com.readycashng.www.ws.api._1_0.AgentServiceService#register
                      * @param register
                     
-                     * @throws com.readycashng.www.ws.api._1_0.TerminatingExceptionException : 
+                     * @throws com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException : 
                      */
 
                     
 
-                            public  com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.RegisterResponseE register(
+                            public  com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.RegisterResponseE register(
 
-                            com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.RegisterE register)
+                            com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.RegisterE register)
                         
 
                     throws java.rmi.RemoteException
                     
                     
-                        ,com.readycashng.www.ws.api._1_0.TerminatingExceptionException{
+                        ,com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException{
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
                org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[9].getName());
@@ -1488,11 +1488,11 @@
                 
                                 java.lang.Object object = fromOM(
                                              _returnEnv.getBody().getFirstElement() ,
-                                             com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.RegisterResponseE.class,
+                                             com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.RegisterResponseE.class,
                                               getEnvelopeNamespaces(_returnEnv));
 
                                
-                                        return (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.RegisterResponseE)object;
+                                        return (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.RegisterResponseE)object;
                                    
          }catch(org.apache.axis2.AxisFault f){
 
@@ -1512,8 +1512,8 @@
                                    new java.lang.Class[]{messageClass});
                         m.invoke(ex,new java.lang.Object[]{messageObject});
                         
-                        if (ex instanceof com.readycashng.www.ws.api._1_0.TerminatingExceptionException){
-                          throw (com.readycashng.www.ws.api._1_0.TerminatingExceptionException)ex;
+                        if (ex instanceof com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException){
+                          throw (com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException)ex;
                         }
                         
 
@@ -1556,20 +1556,20 @@
                      * @see com.readycashng.www.ws.api._1_0.AgentServiceService#check_tran_stat
                      * @param check_tran_stat
                     
-                     * @throws com.readycashng.www.ws.api._1_0.TerminatingExceptionException : 
+                     * @throws com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException : 
                      */
 
                     
 
-                            public  com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Check_tran_statResponseE check_tran_stat(
+                            public  com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Check_tran_statResponseE check_tran_stat(
 
-                            com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Check_tran_statE check_tran_stat)
+                            com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Check_tran_statE check_tran_stat)
                         
 
                     throws java.rmi.RemoteException
                     
                     
-                        ,com.readycashng.www.ws.api._1_0.TerminatingExceptionException{
+                        ,com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException{
               org.apache.axis2.context.MessageContext _messageContext = null;
               try{
                org.apache.axis2.client.OperationClient _operationClient = _serviceClient.createClient(_operations[10].getName());
@@ -1615,11 +1615,11 @@
                 
                                 java.lang.Object object = fromOM(
                                              _returnEnv.getBody().getFirstElement() ,
-                                             com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Check_tran_statResponseE.class,
+                                             com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Check_tran_statResponseE.class,
                                               getEnvelopeNamespaces(_returnEnv));
 
                                
-                                        return (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Check_tran_statResponseE)object;
+                                        return (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Check_tran_statResponseE)object;
                                    
          }catch(org.apache.axis2.AxisFault f){
 
@@ -1639,8 +1639,8 @@
                                    new java.lang.Class[]{messageClass});
                         m.invoke(ex,new java.lang.Object[]{messageObject});
                         
-                        if (ex instanceof com.readycashng.www.ws.api._1_0.TerminatingExceptionException){
-                          throw (com.readycashng.www.ws.api._1_0.TerminatingExceptionException)ex;
+                        if (ex instanceof com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException){
+                          throw (com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException)ex;
                         }
                         
 
@@ -1708,13 +1708,13 @@
         }
         return false;
     }
-     //https://www.readycash.com.ng:6443/ws/api/1.0
+     //http://62.173.32.27:8080/ws/api/1.0
         public static class Register
         implements org.apache.axis2.databinding.ADBBean{
         /* This type was generated from the piece of schema that had
                 name = register
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -2067,7 +2067,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -2507,7 +2507,7 @@
         /* This type was generated from the piece of schema that had
                 name = airtimeResponse
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -2625,7 +2625,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -2926,7 +2926,7 @@
         /* This type was generated from the piece of schema that had
                 name = balanceResponse
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -3044,7 +3044,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -3346,7 +3346,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "bank_account_name_inquiry",
-                "ns1");
+                "ns4");
 
             
 
@@ -3424,7 +3424,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -3680,7 +3680,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "register",
-                "ns1");
+                "ns4");
 
             
 
@@ -3758,7 +3758,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -4014,7 +4014,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "serviceResponse",
-                "ns1");
+                "ns4");
 
             
 
@@ -4092,7 +4092,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -4348,7 +4348,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "login",
-                "ns1");
+                "ns4");
 
             
 
@@ -4426,7 +4426,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -4681,7 +4681,7 @@
         /* This type was generated from the piece of schema that had
                 name = airtime
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -4991,7 +4991,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -5401,7 +5401,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "check_tran_stat",
-                "ns1");
+                "ns4");
 
             
 
@@ -5479,7 +5479,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -5734,7 +5734,7 @@
         /* This type was generated from the piece of schema that had
                 name = bank_account_name_inquiry
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -5984,7 +5984,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -6622,7 +6622,7 @@
         /* This type was generated from the piece of schema that had
                 name = serviceResponse
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -7280,7 +7280,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -7878,7 +7878,7 @@
         /* This type was generated from the piece of schema that had
                 name = faultBean
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
      
@@ -7948,7 +7948,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -8225,7 +8225,7 @@
         /* This type was generated from the piece of schema that had
                 name = check_tran_statResponse
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -8343,7 +8343,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -8644,7 +8644,7 @@
         /* This type was generated from the piece of schema that had
                 name = change_keyResponse
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -8762,7 +8762,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -9063,7 +9063,7 @@
         /* This type was generated from the piece of schema that had
                 name = bank_transferResponse
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -9181,7 +9181,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -9483,7 +9483,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "loginResponse",
-                "ns1");
+                "ns4");
 
             
 
@@ -9561,7 +9561,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -9817,7 +9817,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "link_cardResponse",
-                "ns1");
+                "ns4");
 
             
 
@@ -9895,7 +9895,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -10150,7 +10150,7 @@
         /* This type was generated from the piece of schema that had
                 name = link_cardResponse
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -10268,7 +10268,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -10570,7 +10570,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "link_card",
-                "ns1");
+                "ns4");
 
             
 
@@ -10648,7 +10648,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -10903,7 +10903,7 @@
         /* This type was generated from the piece of schema that had
                 name = mobile_transferResponse
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -11021,7 +11021,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -11322,7 +11322,7 @@
         /* This type was generated from the piece of schema that had
                 name = change_key
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -11512,7 +11512,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -11856,7 +11856,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "bank_transferResponse",
-                "ns1");
+                "ns4");
 
             
 
@@ -11934,7 +11934,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -12190,7 +12190,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "bank_account_name_inquiryResponse",
-                "ns1");
+                "ns4");
 
             
 
@@ -12268,7 +12268,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -12523,7 +12523,7 @@
         /* This type was generated from the piece of schema that had
                 name = check_tran_stat
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -12773,7 +12773,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -13149,7 +13149,7 @@
         /* This type was generated from the piece of schema that had
                 name = balance
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -13279,7 +13279,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -13590,7 +13590,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "registerResponse",
-                "ns1");
+                "ns4");
 
             
 
@@ -13668,7 +13668,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -13923,7 +13923,7 @@
         /* This type was generated from the piece of schema that had
                 name = cash_outResponse
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -14041,7 +14041,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -14343,7 +14343,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "status",
-                "ns1");
+                "ns4");
 
             
 
@@ -14470,7 +14470,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -14778,7 +14778,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "TerminatingException",
-                "ns1");
+                "ns4");
 
             
 
@@ -14862,7 +14862,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -15141,7 +15141,7 @@
         /* This type was generated from the piece of schema that had
                 name = bank_transfer
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -15631,7 +15631,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -16139,7 +16139,7 @@
         /* This type was generated from the piece of schema that had
                 name = loginResponse
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -16257,7 +16257,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -16558,7 +16558,7 @@
         /* This type was generated from the piece of schema that had
                 name = cash_out
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -16868,7 +16868,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -17278,7 +17278,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "cash_out",
-                "ns1");
+                "ns4");
 
             
 
@@ -17356,7 +17356,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -17612,7 +17612,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "mobile_transfer",
-                "ns1");
+                "ns4");
 
             
 
@@ -17690,7 +17690,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -17945,7 +17945,7 @@
         /* This type was generated from the piece of schema that had
                 name = mobile_transfer
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -18255,7 +18255,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -18665,7 +18665,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "bank_transfer",
-                "ns1");
+                "ns4");
 
             
 
@@ -18743,7 +18743,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -18998,7 +18998,7 @@
         /* This type was generated from the piece of schema that had
                 name = login
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -19188,7 +19188,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -19532,7 +19532,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "mobile_transferResponse",
-                "ns1");
+                "ns4");
 
             
 
@@ -19610,7 +19610,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -19866,7 +19866,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "balance",
-                "ns1");
+                "ns4");
 
             
 
@@ -19944,7 +19944,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -20200,7 +20200,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "cash_outResponse",
-                "ns1");
+                "ns4");
 
             
 
@@ -20278,7 +20278,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -20533,7 +20533,7 @@
         /* This type was generated from the piece of schema that had
                 name = registerResponse
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -20651,7 +20651,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -20953,7 +20953,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "airtimeResponse",
-                "ns1");
+                "ns4");
 
             
 
@@ -21031,7 +21031,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -21287,7 +21287,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "change_key",
-                "ns1");
+                "ns4");
 
             
 
@@ -21365,7 +21365,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -21621,7 +21621,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "airtime",
-                "ns1");
+                "ns4");
 
             
 
@@ -21699,7 +21699,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -21955,7 +21955,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "balanceResponse",
-                "ns1");
+                "ns4");
 
             
 
@@ -22033,7 +22033,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -22288,7 +22288,7 @@
         /* This type was generated from the piece of schema that had
                 name = link_card
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -22538,7 +22538,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -22915,7 +22915,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "change_keyResponse",
-                "ns1");
+                "ns4");
 
             
 
@@ -22993,7 +22993,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -23248,7 +23248,7 @@
         /* This type was generated from the piece of schema that had
                 name = bank_account_name_inquiryResponse
                 Namespace URI = http://www.readycashng.com/ws/api/1.0
-                Namespace Prefix = ns1
+                Namespace Prefix = ns4
                 */
             
 
@@ -23366,7 +23366,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -23668,7 +23668,7 @@
                 public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
                 "http://www.readycashng.com/ws/api/1.0",
                 "check_tran_statResponse",
-                "ns1");
+                "ns4");
 
             
 
@@ -23746,7 +23746,7 @@
 
         private static java.lang.String generatePrefix(java.lang.String namespace) {
             if(namespace.equals("http://www.readycashng.com/ws/api/1.0")){
-                return "ns1";
+                return "ns4";
             }
             return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
         }
@@ -23996,12 +23996,12 @@
         }
            
     
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24010,12 +24010,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceResponseE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceResponseE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceResponseE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceResponseE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24024,12 +24024,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24038,12 +24038,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24052,12 +24052,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outResponseE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferResponseE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outResponseE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferResponseE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24066,12 +24066,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Mobile_transferE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Mobile_transferE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24080,12 +24080,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Mobile_transferResponseE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outResponseE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Mobile_transferResponseE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outResponseE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24094,12 +24094,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.AirtimeE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_account_name_inquiryE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.AirtimeE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_account_name_inquiryE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24108,12 +24108,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.AirtimeResponseE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_account_name_inquiryResponseE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.AirtimeResponseE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_account_name_inquiryResponseE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24122,12 +24122,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_account_name_inquiryE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.AirtimeE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_account_name_inquiryE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.AirtimeE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24136,12 +24136,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_account_name_inquiryResponseE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.AirtimeResponseE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_account_name_inquiryResponseE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.AirtimeResponseE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24150,12 +24150,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Change_keyE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Change_keyE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Change_keyE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Change_keyE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24164,12 +24164,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Change_keyResponseE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Change_keyResponseE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Change_keyResponseE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Change_keyResponseE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24178,12 +24178,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Link_cardE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Link_cardE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Link_cardE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Link_cardE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24192,12 +24192,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Link_cardResponseE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Link_cardResponseE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Link_cardResponseE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Link_cardResponseE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24206,12 +24206,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_transferE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_transferE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24220,12 +24220,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_transferResponseE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferResponseE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_transferResponseE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferResponseE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24234,12 +24234,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.LoginE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.LoginE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24248,12 +24248,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.LoginResponseE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginResponseE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.LoginResponseE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginResponseE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24262,12 +24262,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.RegisterE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.RegisterE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.RegisterE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.RegisterE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24276,12 +24276,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.RegisterResponseE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.RegisterResponseE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.RegisterResponseE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.RegisterResponseE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24290,12 +24290,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Check_tran_statE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Check_tran_statE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Check_tran_statE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Check_tran_statE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24304,12 +24304,12 @@
 
             }
         
-            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Check_tran_statResponseE param, boolean optimizeContent)
+            private  org.apache.axiom.om.OMElement  toOM(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Check_tran_statResponseE param, boolean optimizeContent)
             throws org.apache.axis2.AxisFault {
 
             
                         try{
-                             return param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Check_tran_statResponseE.MY_QNAME,
+                             return param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Check_tran_statResponseE.MY_QNAME,
                                           org.apache.axiom.om.OMAbstractFactory.getOMFactory());
                         } catch(org.apache.axis2.databinding.ADBException e){
                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24319,14 +24319,14 @@
             }
         
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceE.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceE.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24340,14 +24340,14 @@
 
                              
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outE.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferE.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24361,14 +24361,14 @@
 
                              
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Mobile_transferE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Mobile_transferE.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outE.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24382,14 +24382,14 @@
 
                              
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.AirtimeE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_account_name_inquiryE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.AirtimeE.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_account_name_inquiryE.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24403,14 +24403,14 @@
 
                              
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_account_name_inquiryE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.AirtimeE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_account_name_inquiryE.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.AirtimeE.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24424,14 +24424,14 @@
 
                              
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Change_keyE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Change_keyE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Change_keyE.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Change_keyE.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24445,14 +24445,14 @@
 
                              
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Link_cardE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Link_cardE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Link_cardE.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Link_cardE.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24466,14 +24466,14 @@
 
                              
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_transferE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_transferE.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferE.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24487,14 +24487,14 @@
 
                              
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.LoginE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.LoginE.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginE.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24508,14 +24508,14 @@
 
                              
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.RegisterE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.RegisterE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.RegisterE.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.RegisterE.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24529,14 +24529,14 @@
 
                              
                                     
-                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Check_tran_statE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
+                                        private  org.apache.axiom.soap.SOAPEnvelope toEnvelope(org.apache.axiom.soap.SOAPFactory factory, com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Check_tran_statE param, boolean optimizeContent, javax.xml.namespace.QName methodQName)
                                         throws org.apache.axis2.AxisFault{
 
                                              
                                                     try{
 
                                                             org.apache.axiom.soap.SOAPEnvelope emptyEnvelope = factory.getDefaultEnvelope();
-                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Check_tran_statE.MY_QNAME,factory));
+                                                            emptyEnvelope.getBody().addChild(param.getOMElement(com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Check_tran_statE.MY_QNAME,factory));
                                                             return emptyEnvelope;
                                                         } catch(org.apache.axis2.databinding.ADBException e){
                                                             throw org.apache.axis2.AxisFault.makeFault(e);
@@ -24566,226 +24566,226 @@
 
         try {
         
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceResponseE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceResponseE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outResponseE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferResponseE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Cash_outResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Mobile_transferE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Mobile_transferE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Mobile_transferResponseE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outResponseE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Mobile_transferResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.AirtimeE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_account_name_inquiryE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.AirtimeE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_account_name_inquiryE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.AirtimeResponseE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_account_name_inquiryResponseE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.AirtimeResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_account_name_inquiryResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_account_name_inquiryE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.AirtimeE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_account_name_inquiryE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.AirtimeE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_account_name_inquiryResponseE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.AirtimeResponseE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_account_name_inquiryResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.AirtimeResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Change_keyE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Change_keyE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Change_keyE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Change_keyE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Change_keyResponseE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Change_keyResponseE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Change_keyResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Change_keyResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Link_cardE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Link_cardE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Link_cardE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Link_cardE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Link_cardResponseE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Link_cardResponseE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Link_cardResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Link_cardResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_transferE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_transferE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_transferResponseE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferResponseE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Bank_transferResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.LoginE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.LoginE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.LoginResponseE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginResponseE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.LoginResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.RegisterE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.RegisterE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.RegisterE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.RegisterE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.RegisterResponseE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.RegisterResponseE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.RegisterResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.RegisterResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Check_tran_statE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Check_tran_statE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Check_tran_statE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Check_tran_statE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Check_tran_statResponseE.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Check_tran_statResponseE.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Check_tran_statResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Check_tran_statResponseE.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
            
-                if (com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.class.equals(type)){
+                if (com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.class.equals(type)){
                 
-                           return com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
+                           return com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.TerminatingException.Factory.parse(param.getXMLStreamReaderWithoutCaching());
                     
 
                 }
