@@ -56,13 +56,16 @@ public class ReadyCashPropertyValues {
 		moneyTransfer.setBank(prop.getProperty("Bank_" + parameterType));
 		moneyTransfer.setBankAccountName(prop.getProperty("BankAccountName_"
 				+ parameterType));
-		moneyTransfer.setReadyCashPin(prop.getProperty("ReadyCashPin_"
+		moneyTransfer.setPassword(prop.getProperty("ReadyCashPin_"
 				+ parameterType));
 		moneyTransfer
 				.setAgentPin(prop.getProperty("AgentPin_" + parameterType));
 		moneyTransfer.setSender(prop.getProperty("Sender_" + parameterType));
 		moneyTransfer.setReference(prop.getProperty("Reference_"
 				+ parameterType));
+		moneyTransfer.setBankPhoneNumber(prop
+				.getProperty("BankAccountPhoneNumber_" + parameterType));
+		moneyTransfer.setParameterType(parameterType);
 		if (parameterType.equalsIgnoreCase("production")) {
 
 			TripleDES tripleDes = new TripleDES();

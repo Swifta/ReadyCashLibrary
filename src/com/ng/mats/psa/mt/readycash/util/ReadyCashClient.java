@@ -1,5 +1,8 @@
 package com.ng.mats.psa.mt.readycash.util;
 
+import java.io.File;
+import java.io.IOException;
+import java.net.UnknownHostException;
 import java.rmi.RemoteException;
 import java.util.logging.Logger;
 
@@ -7,7 +10,9 @@ import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
 import org.apache.axis2.AxisFault;
+import org.apache.axis2.transport.http.HTTPConstants;
 import org.apache.commons.codec.binary.Hex;
+import org.apache.commons.httpclient.protocol.Protocol;
 
 import com.ng.mats.psa.mt.readycash.model.MoneyTransfer;
 import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub;
@@ -35,43 +40,58 @@ import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.ServiceResponse;
 import com.readycashng.www.ws.api._1_0.TerminatingExceptionException;
 
 /*
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Balance;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceResponse;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceResponseE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transfer;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferResponse;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferResponseE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_out;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outResponse;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outResponseE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Login;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginResponse;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginResponseE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transfer;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferResponse;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferResponseE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.ServiceResponse;
-import com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Balance;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceE;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceResponse;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceResponseE;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transfer;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferE;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferResponse;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferResponseE;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_out;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outE;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outResponse;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outResponseE;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Login;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginE;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginResponse;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginResponseE;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transfer;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferE;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferResponse;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferResponseE;
+ import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.ServiceResponse;
+ import com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException;
  */
-
 public class ReadyCashClient {
 	private static final Logger logger = Logger.getLogger(ReadyCashClient.class
 			.getName());
+	private String wso2appserverHome = "";
 	// private final static String testpin = "1234";
 	private static AgentServiceServiceStub readyCashStub;
 
-	public ReadyCashClient() throws AxisFault {
+	public ReadyCashClient(String parameterType) throws AxisFault {
 		readyCashStub = new AgentServiceServiceStub();
 		readyCashStub._getServiceClient().getOptions().setManageSession(true);
 		long timeOutInMilliSeconds = (5 * 36 * 1000);
 		readyCashStub._getServiceClient().getOptions()
 				.setTimeOutInMilliSeconds(timeOutInMilliSeconds);
+		if (System.getProperty("os.name").equals("Mac OS X")) {
+			wso2appserverHome = "/Users/user/Documents/workspace/wso2esb-4.8.1";
+		} else {
+			wso2appserverHome = "/opt/mats/wso2esb-4.8.1";
+		}
+		if (parameterType.equalsIgnoreCase("production"))
+			try {
+				configureSecurity();
+			} catch (UnknownHostException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 	}
 
 	public static ServiceResponse balanceEnquiry(MoneyTransfer moneyTransfer) {
@@ -86,7 +106,8 @@ public class ReadyCashClient {
 		LoginE login = new LoginE();
 		Login loginParam = new Login();
 		loginParam.setEmail(moneyTransfer.getAgentUsername());
-		loginParam.setPassword(moneyTransfer.getReadyCashPin());
+		// loginParam.setPassword(moneyTransfer.getReadyCashPin());
+		loginParam.setPassword(moneyTransfer.getPassword());
 		logger.info("----------------------after setting login parameters");
 		login.setLogin(loginParam);
 		LoginResponseE loginResponseE = new LoginResponseE();
@@ -212,7 +233,8 @@ public class ReadyCashClient {
 		LoginE login = new LoginE();
 		Login loginParam = new Login();
 		loginParam.setEmail(moneyTransfer.getAgentUsername());
-		loginParam.setPassword(moneyTransfer.getReadyCashPin());
+		// loginParam.setPassword(moneyTransfer.getReadyCashPin());
+		loginParam.setPassword(moneyTransfer.getPassword());
 		logger.info("----------------------after setting login parameters");
 		login.setLogin(loginParam);
 		LoginResponseE loginResponseE = new LoginResponseE();
@@ -349,7 +371,8 @@ public class ReadyCashClient {
 		LoginE login = new LoginE();
 		Login loginParam = new Login();
 		loginParam.setEmail(moneyTransfer.getAgentUsername());
-		loginParam.setPassword(moneyTransfer.getReadyCashPin());
+		// loginParam.setPassword(moneyTransfer.getReadyCashPin());
+		loginParam.setPassword(moneyTransfer.getPassword());
 		logger.info("----------------------after setting login parameters");
 		login.setLogin(loginParam);
 		LoginResponseE loginResponseE = new LoginResponseE();
@@ -521,7 +544,8 @@ public class ReadyCashClient {
 		LoginE login = new LoginE();
 		Login loginParam = new Login();
 		loginParam.setEmail(moneyTransfer.getAgentUsername());
-		loginParam.setPassword(moneyTransfer.getReadyCashPin());
+		// loginParam.setPassword(moneyTransfer.getReadyCashPin());
+		loginParam.setPassword(moneyTransfer.getPassword());
 		logger.info("----------------------after setting login parameters");
 		login.setLogin(loginParam);
 		LoginResponseE loginResponseE = new LoginResponseE();
@@ -574,8 +598,8 @@ public class ReadyCashClient {
 					bankTransferParam.setBank(moneyTransfer.getBank());
 					bankTransferParam
 							.setNarration(moneyTransfer.getReference());
-					bankTransferParam
-							.setPhone_number(moneyTransfer.getSender());
+					bankTransferParam.setPhone_number(moneyTransfer
+							.getBankPhoneNumber());
 					bankTransferParam.setPin(moneyTransfer.getAgentPin());
 					bank_transfer.setBank_transfer(bankTransferParam);
 					logger.info("----------------------After setting bank transfer parameters");
@@ -630,9 +654,48 @@ public class ReadyCashClient {
 		System.out.println("After setting the property values....");
 		logger.info("--------------------------------contents being sent"
 				+ moneyTransfer.toString());
-		// new ReadyCashClient().performCashIn(moneyTransfer);
-		new ReadyCashClient().performCashout(moneyTransfer);
-		// new ReadyCashClient().transferToBank(moneyTransfer);
-		// new ReadyCashClient().balanceEnquiry(moneyTransfer);
+		// new ReadyCashClient(moneyTransfer.getParameterType())
+		// .performCashIn(moneyTransfer);
+		new ReadyCashClient(moneyTransfer.getParameterType())
+				.performCashout(moneyTransfer);
+		// new ReadyCashClient(moneyTransfer.getParameterType())
+		// .transferToBank(moneyTransfer);
+		// new ReadyCashClient(moneyTransfer.getParameterType())
+		// .balanceEnquiry(moneyTransfer);
+	}
+
+	@SuppressWarnings("deprecation")
+	public void configureSecurity() throws UnknownHostException, IOException {
+		String clientSSLStore = wso2appserverHome + File.separator
+				+ "repository" + File.separator + "resources" + File.separator
+				+ "security" + File.separator + "client-truststore.jks";
+
+		// wso2carbon.jks client-truststore.jks
+
+		System.getProperties().remove("javax.net.ssl.trustStore");
+		System.getProperties().remove("javax.net.ssl.trustStoreType");
+		System.getProperties().remove("javax.net.ssl.trustStorePassword");
+
+		System.setProperty("javax.net.ssl.trustStore", clientSSLStore);
+		System.setProperty("javax.net.ssl.trustStoreType", "JKS");
+		System.setProperty("javax.net.ssl.trustStorePassword", "wso2carbon");
+		System.setProperty("jsse.enableSNIExtension", "false");
+		System.setProperty("javax.net.debug", "ssl");
+		System.setProperty("https.protocols", "SSLv3");
+		System.setProperty("https.protocols", "TLSV");
+		// java.lang.System.setProperty("jdk.tls.client.protocols",
+		// "TLSv1,TLSv1.1,TLSv1.2");
+		Protocol myProtocolHandler = new Protocol("https",
+				new SSL3ProtocolSocketFactory(), 443);
+
+		readyCashStub
+				._getServiceClient()
+				.getOptions()
+				.setProperty(HTTPConstants.CUSTOM_PROTOCOL_HANDLER,
+						myProtocolHandler);
+
+		// fundgateStub._getServiceClient().getOptions()
+		// .setProperty(HTTPConstants.CHUNKED, "false");
+
 	}
 }

@@ -16,6 +16,9 @@ public class MoneyTransfer {
 	private String bankAccountName;
 	private String bankAccountNumber;
 	private String bank;
+	private String password;
+	private String parameterType;
+	private String bankPhoneNumber;
 	// @XmlTransient
 	// private CashOutStatus status = CashOutStatus.PENDING;
 	private String reference;
@@ -34,6 +37,9 @@ public class MoneyTransfer {
 		// this.teasyrequestreference = "201407010000001";
 		// this.status = status;
 		this.reference = reference;
+		this.password = password;
+		this.parameterType = parameterType;
+		this.bankPhoneNumber = bankPhoneNumber;
 	}
 
 	public MoneyTransfer() {
@@ -151,6 +157,30 @@ public class MoneyTransfer {
 		this.bank = bank;
 	}
 
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getParameterType() {
+		return parameterType;
+	}
+
+	public void setParameterType(String parameterType) {
+		this.parameterType = parameterType;
+	}
+
+	public String getBankPhoneNumber() {
+		return bankPhoneNumber;
+	}
+
+	public void setBankPhoneNumber(String bankPhoneNumber) {
+		this.bankPhoneNumber = bankPhoneNumber;
+	}
+
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Sender: " + sender + "\n");
@@ -161,6 +191,9 @@ public class MoneyTransfer {
 		sb.append("Agent Username: " + agentUsername + "\n");
 		sb.append("Agent password: " + readyCashPin + "\n");
 		sb.append("Agent pin: " + agentPin + "\n");
+		sb.append("Password: " + password + "\n");
+		sb.append("Parameter Type: " + parameterType + "\n");
+		sb.append("Bank Phone number: " + bankPhoneNumber + "\n");
 
 		// sb.append("Status: " + status + "\n");
 
