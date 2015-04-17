@@ -65,6 +65,10 @@ public class ReadyCashPropertyValues {
 				+ parameterType));
 		moneyTransfer.setBankPhoneNumber(prop
 				.getProperty("BankAccountPhoneNumber_" + parameterType));
+		moneyTransfer.setTrustStoreLocation(prop
+				.getProperty("TrustStoreLocation_" + parameterType));
+		moneyTransfer.setTrustStorePassword(prop
+				.getProperty("TrustStorePassword_" + parameterType));
 		moneyTransfer.setParameterType(parameterType);
 		if (parameterType.equalsIgnoreCase("production")) {
 

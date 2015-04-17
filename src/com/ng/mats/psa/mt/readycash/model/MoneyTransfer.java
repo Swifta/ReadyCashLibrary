@@ -19,6 +19,8 @@ public class MoneyTransfer {
 	private String password;
 	private String parameterType;
 	private String bankPhoneNumber;
+	private String trustStoreLocation;
+	private String trustStorePassword;
 	// @XmlTransient
 	// private CashOutStatus status = CashOutStatus.PENDING;
 	private String reference;
@@ -181,6 +183,22 @@ public class MoneyTransfer {
 		this.bankPhoneNumber = bankPhoneNumber;
 	}
 
+	public String getTrustStoreLocation() {
+		return trustStoreLocation;
+	}
+
+	public void setTrustStoreLocation(String trustStoreLocation) {
+		this.trustStoreLocation = trustStoreLocation;
+	}
+
+	public String getTrustStorePassword() {
+		return trustStorePassword;
+	}
+
+	public void setTrustStorePassword(String trustStorePassword) {
+		this.trustStorePassword = trustStorePassword;
+	}
+
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append("Sender: " + sender + "\n");
@@ -194,6 +212,8 @@ public class MoneyTransfer {
 		sb.append("Password: " + password + "\n");
 		sb.append("Parameter Type: " + parameterType + "\n");
 		sb.append("Bank Phone number: " + bankPhoneNumber + "\n");
+		sb.append("Trust Store Location: " + trustStoreLocation + "\n");
+		sb.append("Trust Store Password: " + trustStorePassword + "\n");
 
 		// sb.append("Status: " + status + "\n");
 

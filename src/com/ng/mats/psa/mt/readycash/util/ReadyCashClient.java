@@ -1,6 +1,5 @@
 package com.ng.mats.psa.mt.readycash.util;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.UnknownHostException;
 import java.rmi.RemoteException;
@@ -67,24 +66,25 @@ import com.readycashng.www.ws.api._1_0.TerminatingExceptionException;
 public class ReadyCashClient {
 	private static final Logger logger = Logger.getLogger(ReadyCashClient.class
 			.getName());
-	private String wso2appserverHome = "";
+	// private String wso2appserverHome = "";
 	// private final static String testpin = "1234";
 	private static AgentServiceServiceStub readyCashStub;
 
-	public ReadyCashClient(String parameterType) throws AxisFault {
+	public ReadyCashClient(MoneyTransfer moneyTransfer) throws AxisFault {
 		readyCashStub = new AgentServiceServiceStub();
 		readyCashStub._getServiceClient().getOptions().setManageSession(true);
 		long timeOutInMilliSeconds = (5 * 36 * 1000);
 		readyCashStub._getServiceClient().getOptions()
 				.setTimeOutInMilliSeconds(timeOutInMilliSeconds);
-		if (System.getProperty("os.name").equals("Mac OS X")) {
-			wso2appserverHome = "/Users/user/Documents/workspace/wso2esb-4.8.1";
-		} else {
-			wso2appserverHome = "/opt/mats/wso2esb-4.8.1";
-		}
-		if (parameterType.equalsIgnoreCase("production"))
+		// if (System.getProperty("os.name").equals("Mac OS X")) {
+		// wso2appserverHome = "/Users/user/Documents/workspace/wso2esb-4.8.1";
+		// } else {
+		// wso2appserverHome = "/opt/mats/wso2esb-4.8.1";
+		// }
+		if (moneyTransfer.getParameterType().equalsIgnoreCase("production"))
 			try {
-				configureSecurity();
+				configureSecurity(moneyTransfer.getTrustStoreLocation(),
+						moneyTransfer.getTrustStorePassword());
 			} catch (UnknownHostException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -651,24 +651,22 @@ public class ReadyCashClient {
 		System.out.println("After the loggers....");
 		MoneyTransfer moneyTransfer = new ReadyCashPropertyValues()
 				.getPropertyValues();
+		ReadyCashClient readyCashClient = new ReadyCashClient(moneyTransfer);
 		System.out.println("After setting the property values....");
 		logger.info("--------------------------------contents being sent"
 				+ moneyTransfer.toString());
-		// new ReadyCashClient(moneyTransfer.getParameterType())
-		// .performCashIn(moneyTransfer);
-		new ReadyCashClient(moneyTransfer.getParameterType())
-				.performCashout(moneyTransfer);
-		// new ReadyCashClient(moneyTransfer.getParameterType())
-		// .transferToBank(moneyTransfer);
-		// new ReadyCashClient(moneyTransfer.getParameterType())
-		// .balanceEnquiry(moneyTransfer);
+		// readyCashClient.performCashIn(moneyTransfer);
+		readyCashClient.performCashout(moneyTransfer);
+		// readyCashClient.transferToBank(moneyTransfer);
+		// readyCashClient.balanceEnquiry(moneyTransfer);
 	}
 
 	@SuppressWarnings("deprecation")
-	public void configureSecurity() throws UnknownHostException, IOException {
-		String clientSSLStore = wso2appserverHome + File.separator
-				+ "repository" + File.separator + "resources" + File.separator
-				+ "security" + File.separator + "client-truststore.jks";
+	public void configureSecurity(String clientSSLStore,
+			String clientSSLPassword) throws UnknownHostException, IOException {
+		// String clientSSLStore = wso2appserverHome + File.separator
+		// + "repository" + File.separator + "resources" + File.separator
+		// + "security" + File.separator + "client-truststore.jks";
 
 		// wso2carbon.jks client-truststore.jks
 
@@ -678,7 +676,8 @@ public class ReadyCashClient {
 
 		System.setProperty("javax.net.ssl.trustStore", clientSSLStore);
 		System.setProperty("javax.net.ssl.trustStoreType", "JKS");
-		System.setProperty("javax.net.ssl.trustStorePassword", "wso2carbon");
+		System.setProperty("javax.net.ssl.trustStorePassword",
+				clientSSLPassword);
 		System.setProperty("jsse.enableSNIExtension", "false");
 		System.setProperty("javax.net.debug", "ssl");
 		System.setProperty("https.protocols", "SSLv3");
