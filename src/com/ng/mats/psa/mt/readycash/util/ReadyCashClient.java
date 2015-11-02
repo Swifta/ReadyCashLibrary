@@ -14,6 +14,30 @@ import org.apache.commons.codec.binary.Hex;
 import org.apache.commons.httpclient.protocol.Protocol;
 
 import com.ng.mats.psa.mt.readycash.model.MoneyTransfer;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Balance;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceE;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceResponse;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceResponseE;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transfer;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferE;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferResponse;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferResponseE;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_out;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outE;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outResponse;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outResponseE;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Login;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginE;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginResponse;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginResponseE;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transfer;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferE;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferResponse;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferResponseE;
+import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.ServiceResponse;
+import com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException;
+
 /*import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub;
  import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.Balance;
  import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.BalanceE;
@@ -38,29 +62,6 @@ import com.ng.mats.psa.mt.readycash.model.MoneyTransfer;
  import com.readycashng.www.ws.api._1_0.AgentServiceServiceStub.ServiceResponse;
  import com.readycashng.www.ws.api._1_0.TerminatingExceptionException;
  */
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Balance;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceResponse;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.BalanceResponseE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transfer;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferResponse;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Bank_transferResponseE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_out;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outResponse;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Cash_outResponseE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Login;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginResponse;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.LoginResponseE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transfer;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferResponse;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.Mobile_transferResponseE;
-import com.readycashng.www.ws.api._1_0.test.AgentServiceServiceStub.ServiceResponse;
-import com.readycashng.www.ws.api._1_0.test.TerminatingExceptionException;
 
 public class ReadyCashClient {
 	private static final Logger logger = Logger.getLogger(ReadyCashClient.class
@@ -654,10 +655,10 @@ public class ReadyCashClient {
 		System.out.println("After setting the property values....");
 		logger.info("--------------------------------contents being sent"
 				+ moneyTransfer.toString());
-		// readyCashClient.performCashIn(moneyTransfer);
+		readyCashClient.performCashIn(moneyTransfer);
 		// readyCashClient.performCashout(moneyTransfer);
 		// readyCashClient.transferToBank(moneyTransfer);
-		readyCashClient.balanceEnquiry(moneyTransfer);
+		// readyCashClient.balanceEnquiry(moneyTransfer);
 	}
 
 	@SuppressWarnings("deprecation")
